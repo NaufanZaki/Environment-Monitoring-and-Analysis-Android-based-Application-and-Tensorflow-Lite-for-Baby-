@@ -1,0 +1,284 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigationBar"
+        android:padding="16dp">
+
+        <!-- Your scrollable content here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Scrollable Content -->
+            <ScrollView
+                android:id="@+id/scrollableContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/navigationBar"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <!-- Greeting Section -->
+                    <TextView
+                        android:id="@+id/greetingText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hi Budiono!"
+                        android:textSize="24sp"
+                        android:textColor="#344055"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="start" />
+
+                    <!-- Child Information and Date & Temperature Cards -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <!-- Child Information Card -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_card_background"
+                            android:padding="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:elevation="4dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Child Information"
+                                android:textSize="14sp"
+                                android:textColor="#757575"
+                                android:paddingBottom="8dp" />
+
+                            <TextView
+                                android:id="@+id/childName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sarah Nelson"
+                                android:textSize="18sp"
+                                android:textColor="#344055"
+                                android:textStyle="bold"
+                                android:paddingBottom="4dp" />
+
+                            <TextView
+                                android:id="@+id/childDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Blood Type: A+\nAge: 6 Months\nLast Check-Up: July 10, 2024"
+                                android:textSize="14sp"
+                                android:textColor="#757575" />
+                        </LinearLayout>
+
+                        <!-- Date & Temperature Card -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rounded_card_background"
+                            android:padding="16dp"
+                            android:layout_marginStart="8dp"
+                            android:elevation="4dp"
+                            android:gravity="end"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="26th"
+                                android:textSize="40sp"
+                                android:textColor="#344055"
+                                android:textStyle="bold"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="July\nTemperature: 26°C"
+                                android:textSize="14sp"
+                                android:textColor="#757575"
+                                android:gravity="end" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Sound and Light Level Card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_card_background"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="16dp"
+                        android:elevation="4dp">
+
+                        <!-- Title Section with Gradient Background -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_background"
+                            android:padding="8dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sound And Light Level"
+                                android:textSize="16sp"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:gravity="center_vertical" />
+                        </LinearLayout>
+
+                        <!-- Content Section -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <!-- Decibels -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Decibels"
+                                    android:textSize="14sp"
+                                    android:textColor="#757575" />
+
+                                <TextView
+                                    android:id="@+id/decibels"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.00 dB"
+                                    android:textSize="20sp"
+                                    android:textColor="#0D47A1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/suggestion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Quiet environment. Ideal for babies."
+                                    android:textSize="12sp"
+                                    android:textColor="#3F51B5"
+                                    android:paddingTop="4dp" />
+                            </LinearLayout>
+
+                            <!-- Light Level -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Light Level"
+                                    android:textSize="14sp"
+                                    android:textColor="#757575" />
+
+                                <TextView
+                                    android:id="@+id/lightLevel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.00 lux"
+                                    android:textSize="20sp"
+                                    android:textColor="#0D47A1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/lightSuggestion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Suggestion here"
+                                    android:textSize="12sp"
+                                    android:textColor="#344055"
+                                    android:paddingTop="4dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Navigation Bar -->
+    <RelativeLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_background">
+
+        <!-- View History Button -->
+        <TextView
+            android:id="@+id/btnHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+            android:gravity="center"
+            android:text="View History"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Scan Button -->
+        <TextView
+            android:id="@+id/btnNavigateScan"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp"
+            android:background="@drawable/navbutton_scan"
+            android:gravity="center"
+            android:text="Scan"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- View Analysis Button -->
+        <TextView
+            android:id="@+id/btnAnalysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="Analysis"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

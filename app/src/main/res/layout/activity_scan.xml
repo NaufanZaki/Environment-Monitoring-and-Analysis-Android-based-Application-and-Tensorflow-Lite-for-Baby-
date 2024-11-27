@@ -1,0 +1,152 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#F8F8F8">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Environment Scan"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:textColor="#344055" />
+
+    <!-- Tombol Bulat -->
+    <TextView
+        android:id="@+id/btnStartScan"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient_circle"
+        android:text="Start Scan"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Rekomendasi -->
+    <TextView
+        android:id="@+id/tvRecommendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recommendation_background"
+        android:text="Good Environment"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Kartu Hasil -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <!-- Bagian Hasil -->
+        <TextView
+            android:id="@+id/tvResultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#344055"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Decibels -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Decibels"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575" />
+
+                <TextView
+                    android:id="@+id/tvDecibels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00 Db"
+                    android:textSize="20sp"
+                    android:textColor="#344055"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Light Level -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Light Level"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575" />
+
+                <TextView
+                    android:id="@+id/tvLightLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00 Lux"
+                    android:textSize="20sp"
+                    android:textColor="#344055"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#344055"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Informasi Lokasi -->
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coming Soon"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNavigateScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Home"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
